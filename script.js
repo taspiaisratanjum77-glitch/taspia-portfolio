@@ -10,6 +10,7 @@ const translations = {
     nav_hello: "HELLO",
     nav_about: "ABOUT ME",
     nav_skills: "SKILLS",
+    nav_cp: "CP",
     nav_projects: "PROJECTS",
     contact_label: "Connect With Me",
     badge_status: "Available for projects & hackathons",
@@ -30,8 +31,10 @@ const translations = {
     about_p3: "Beyond coding, I have a deep passion for UI/UX Design, participating in hackathons, competitive programming, and video editing. I believe technology thrives at the intersection of creative artistry and robust engineering.",
     pillar_frontend_title: "UI/UX & Frontend",
     pillar_frontend_desc: "Building visually stunning, accessible, and responsive user interfaces with attention to micro-details.",
+    pillar_cp_badge: "Codeforces",
     pillar_cp_title: "Problem Solving",
     pillar_cp_desc: "Practicing competitive programming and exploring efficient algorithms & core computer science.",
+    pillar_cp_btn: "View Profile & Stats",
     pillar_ai_title: "AI & Innovation",
     pillar_ai_desc: "Aspiring AI engineer eager to integrate machine learning and intelligent automations into the web.",
     pillar_writing_badge: "Side Interest",
@@ -44,6 +47,17 @@ const translations = {
     filter_frontend: "Frontend",
     filter_languages: "Languages",
     filter_tools: "Tools & Design",
+    cp_title: "Competitive Programming",
+    cp_subtitle: "Algorithmic problem solving, contest ratings, and data structures practice on Codeforces",
+    cp_live_synced: "Verified Profile",
+    cp_rank_label: "Current Rank",
+    cp_rating_label: "Current Rating",
+    cp_peak_label: "Peak Rating",
+    cp_solved_label: "Problems Solved",
+    cp_lang_label: "Primary Languages",
+    cp_topics_label: "Problem Solving Domains",
+    cp_desc: "Actively participating in Codeforces rounds, sharpening algorithmic logic in Data Structures, Number Theory, Greedy strategies, and problem solving with C++ and C.",
+    cp_view_btn: "View Codeforces Profile",
     projects_title: "Projects",
     projects_subtitle: "A curated selection of web applications, experiments, and creative UI works",
     project_estate_desc: "Interactive real estate and properties exploration web app featuring dynamic filtering, responsive grid layouts, and clean user experience.",
@@ -74,6 +88,7 @@ const translations = {
     nav_hello: "স্বাগতম",
     nav_about: "আমার সম্পর্কে",
     nav_skills: "দক্ষতা",
+    nav_cp: "সিপি",
     nav_projects: "প্রকল্পসমূহ",
     contact_label: "যোগাযোগ করুন",
     badge_status: "প্রজেক্ট এবং হ্যাকাথনের জন্য প্রস্তুত",
@@ -94,8 +109,10 @@ const translations = {
     about_p3: "প্রোগ্রামিংয়ের পাশাপাশি ইউআই/ইউএক্স ডিজাইন, হ্যাকাথনে অংশগ্রহণ, প্রতিযোগিতামূলক প্রোগ্রামিং এবং ভিডিও এডিটিংয়ে আমার গভীর আগ্রহ রয়েছে।",
     pillar_frontend_title: "ইউআই/ইউএক্স ও ফ্রন্টএন্ড",
     pillar_frontend_desc: "রেসপনসিভ, আধুনিক এবং ব্যবহারকারী-বান্ধব ইন্টারফেস নিখুঁতভাবে তৈরি করা।",
+    pillar_cp_badge: "কোডফোর্সেস",
     pillar_cp_title: "প্রবলেম সলভিং",
     pillar_cp_desc: "দক্ষ অ্যালগরিদম ও ডেটা স্ট্রাকচারের মাধ্যমে সমস্যার সমাধান ও প্রতিযোগিতামূলক কোডিং।",
+    pillar_cp_btn: "প্রোফাইল ও পরিসংখ্যান",
     pillar_ai_title: "এআই ও উদ্ভাবন",
     pillar_ai_desc: "ভবিষ্যতের বুদ্ধিমত্তাভিত্তিক ও অটোমেশন প্রযুক্তিকে ওয়েব প্ল্যাটফর্মে যুক্ত করার স্বপ্ন।",
     pillar_writing_badge: "অন্যান্য আগ্রহ",
@@ -108,6 +125,17 @@ const translations = {
     filter_frontend: "ফ্রন্টএন্ড",
     filter_languages: "প্রোগ্রামিং ভাষা",
     filter_tools: "টুলস ও ডিজাইন",
+    cp_title: "প্রতিযোগিতামূলক প্রোগ্রামিং",
+    cp_subtitle: "কোডফোর্সেস প্ল্যাটফর্মে অ্যালগরিদম ও ডেটা স্ট্রাকচার অনুশীলন, কনটেস্ট ও সমস্যা সমাধান",
+    cp_live_synced: "ভেরিফায়েড প্রোফাইল",
+    cp_rank_label: "বর্তমান র‍্যাঙ্ক",
+    cp_rating_label: "বর্তমান রেটিং",
+    cp_peak_label: "সর্বোচ্চ রেটিং",
+    cp_solved_label: "সমাধানকৃত সমস্যা",
+    cp_lang_label: "প্রধান ভাষা",
+    cp_topics_label: "যেসব বিষয়ে অনুশীলন",
+    cp_desc: "কোডফোর্সেস রাউন্ডে সক্রিয়ভাবে অংশগ্রহণ, ডেটা স্ট্রাকচার, নাম্বার থিওরি, গ্রিডি অ্যালগরিদম ও গণিতভিত্তিক সমস্যা সমাধানে দক্ষতা বৃদ্ধি।",
+    cp_view_btn: "কোডফোর্সেস প্রোফাইল দেখুন",
     projects_title: "প্রকল্পসমূহ",
     projects_subtitle: "আমার তৈরি করা নির্বাচিত ওয়েব অ্যাপ্লিকেশন, প্রটোটাইপ ও ডিজাইন কাজ",
     project_estate_desc: "ইন্টারেক্টিভ রিয়েল এস্টেট ও লোকেশন ব্রাউজিং ওয়েব অ্যাপ, যাতে রয়েছে ডায়নামিক ফিল্টারিং ও মসৃণ ইউজার এক্সপেরিয়েন্স।",
@@ -338,6 +366,52 @@ function showToast(message) {
   }, 2800);
 }
 
+// 6b. Live Codeforces API Synchronizer
+async function fetchCodeforcesStats() {
+  const handle = 'israt_anjum_taspia';
+  const ratingEl = document.getElementById('cfCurrentRating');
+  const maxRatingEl = document.getElementById('cfMaxRating');
+  const rankEl = document.getElementById('cfRank');
+  const solvedEl = document.getElementById('cfSolvedCount');
+  const syncStatusEl = document.getElementById('cfSyncStatus');
+
+  try {
+    const userRes = await fetch(`https://codeforces.com/api/user.info?handles=${handle}`);
+    if (userRes.ok) {
+      const userData = await userRes.json();
+      if (userData.status === 'OK' && Array.isArray(userData.result) && userData.result.length > 0) {
+        const u = userData.result[0];
+        if (ratingEl && u.rating) ratingEl.textContent = u.rating;
+        if (maxRatingEl && u.maxRating) maxRatingEl.textContent = u.maxRating;
+        if (rankEl && u.rank) rankEl.textContent = u.rank;
+        if (syncStatusEl) {
+          syncStatusEl.textContent = currentLang === 'bn' ? 'কোডফোর্সেস লাইভ সিঙ্কড' : 'Live Synced with Codeforces';
+        }
+      }
+    }
+
+    // Fetch problem submissions to dynamically calculate solved problems
+    const subRes = await fetch(`https://codeforces.com/api/user.status?handle=${handle}&from=1&count=200`);
+    if (subRes.ok) {
+      const subData = await subRes.json();
+      if (subData.status === 'OK' && Array.isArray(subData.result)) {
+        const solved = new Set();
+        subData.result.forEach((sub) => {
+          if (sub.verdict === 'OK' && sub.problem) {
+            solved.add(`${sub.problem.contestId || ''}${sub.problem.index || ''}`);
+          }
+        });
+        if (solvedEl && solved.size > 0) {
+          solvedEl.textContent = `${solved.size}+`;
+        }
+      }
+    }
+  } catch (err) {
+    // Graceful fallback to verified hardcoded baseline (Rating 737, Max 792, 108+ solved)
+    console.debug('Codeforces live fetch fallback:', err);
+  }
+}
+
 // 7. Initialize DOM Elements & Event Listeners
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize Lucide Icons
@@ -465,6 +539,18 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' });
     });
   }
+
+  // Quick CP jump links (from About Me pillar, etc.)
+  document.querySelectorAll('[data-section-link="cp"]').forEach((link) => {
+    link.addEventListener('click', (e) => {
+      sfx.playClick();
+      e.preventDefault();
+      document.querySelector('#cp')?.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  // Fetch real-time Codeforces stats asynchronously
+  fetchCodeforcesStats();
 
   // Scroll Spy on Main Content Scroll
   const mainContent = document.getElementById('mainContent');

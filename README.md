@@ -10,6 +10,7 @@
   </p>
 
   <p>
+    <a href="https://codeforces.com/profile/israt_anjum_taspia"><img src="https://img.shields.io/badge/Codeforces-737_(Newbie)-1F8ACB?style=for-the-badge&logo=codeforces&logoColor=white" alt="Codeforces" /></a>
     <a href="https://linkedin.com/in/israt-anjum-taspia-647754388"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
     <a href="https://behance.net/isratanjum6"><img src="https://img.shields.io/badge/Behance-1769FF?style=for-the-badge&logo=behance&logoColor=white" alt="Behance" /></a>
     <a href="https://facebook.com/taspia.israt.50/"><img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook" /></a>
@@ -49,6 +50,16 @@ Built with an obsession for visual excellence, this portfolio features a curated
 | **Languages** | C, C++, Python, JavaScript |
 | **Design & Creative** | Figma, Adobe Illustrator, Photoshop, InDesign, Canva, Video Editing |
 | **Tools & Platforms** | Git, GitHub, VS Code, Vercel, Vite |
+
+---
+
+## ⚡ Competitive Programming (Codeforces)
+
+- **Handle:** [`@israt_anjum_taspia`](https://codeforces.com/profile/israt_anjum_taspia)
+- **Current Rating:** `737` | **Peak Rating:** `792` (Rank: `Newbie`)
+- **Problems Solved:** `108+` unique algorithmic problems
+- **Core Topics:** Implementation, Math, Greedy Algorithms, Strings, Number Theory, Sorting
+- **Languages:** C++, C
 
 ---
 

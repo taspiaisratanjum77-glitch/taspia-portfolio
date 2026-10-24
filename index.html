@@ -74,6 +74,9 @@
         <a href="#skills" class="nav-link" data-section="skills">
           <span class="nav-text" data-i18n="nav_skills">SKILLS</span>
         </a>
+        <a href="#cp" class="nav-link" data-section="cp">
+          <span class="nav-text" data-i18n="nav_cp">CP</span>
+        </a>
         <a href="#projects" class="nav-link" data-section="projects">
           <span class="nav-text" data-i18n="nav_projects">PROJECTS</span>
         </a>
@@ -87,6 +90,15 @@
           <a href="https://github.com/taspiaisratanjum77-glitch" target="_blank" rel="noopener noreferrer" class="social-icon" title="GitHub">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
               <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+          </a>
+
+          <!-- Codeforces -->
+          <a href="https://codeforces.com/profile/israt_anjum_taspia" target="_blank" rel="noopener noreferrer" class="social-icon" title="Codeforces">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path d="M4.5 7.5A1.5 1.5 0 0 1 6 9v10.5a1.5 1.5 0 0 1-3 0V9a1.5 1.5 0 0 1 1.5-1.5z"/>
+              <path d="M12 3a1.5 1.5 0 0 1 1.5 1.5v15a1.5 1.5 0 0 1-3 0v-15A1.5 1.5 0 0 1 12 3z"/>
+              <path d="M19.5 5.25a1.5 1.5 0 0 1 1.5 1.5v12.75a1.5 1.5 0 0 1-3 0V6.75a1.5 1.5 0 0 1 1.5-1.5z"/>
             </svg>
           </a>
 
@@ -220,13 +232,20 @@
             <p class="pillar-desc" data-i18n="pillar_frontend_desc">Building visually stunning, accessible, and responsive user interfaces with attention to micro-details.</p>
           </div>
 
-          <div class="pillar-card">
-            <div class="pillar-icon-box">
-              <i data-lucide="terminal"></i>
+          <a href="#cp" class="pillar-card pillar-card-link" data-section-link="cp" title="Explore Competitive Programming & Codeforces Profile">
+            <div class="pillar-header-row">
+              <div class="pillar-icon-box">
+                <i data-lucide="terminal"></i>
+              </div>
+              <span class="pillar-badge-tag" data-i18n="pillar_cp_badge">Codeforces</span>
             </div>
             <h3 class="pillar-title" data-i18n="pillar_cp_title">Problem Solving</h3>
             <p class="pillar-desc" data-i18n="pillar_cp_desc">Practicing competitive programming and exploring efficient algorithms & core computer science.</p>
-          </div>
+            <div class="pillar-action-link">
+              <span data-i18n="pillar_cp_btn">View Profile &amp; Stats</span>
+              <i data-lucide="arrow-down-right"></i>
+            </div>
+          </a>
 
           <div class="pillar-card">
             <div class="pillar-icon-box">
@@ -406,7 +425,136 @@
         </div>
       </section>
 
-      <!-- Section 4: Projects -->
+      <!-- Section 4: Competitive Programming (Codeforces) -->
+      <section id="cp" class="content-section">
+        <div class="section-header">
+          <h2 class="section-title" data-i18n="cp_title">Competitive Programming</h2>
+          <div class="title-glow-line"></div>
+        </div>
+
+        <p class="section-subtitle" data-i18n="cp_subtitle">Algorithmic problem solving, contest ratings, and data structures practice on Codeforces</p>
+
+        <!-- Codeforces Showcase Card -->
+        <div class="cp-showcase-card">
+          <!-- Card Top Bar -->
+          <div class="cp-card-topbar">
+            <div class="cp-profile-ident">
+              <div class="cf-logo-box">
+                <svg class="cf-logo-svg" viewBox="0 0 24 24" width="36" height="36" fill="currentColor">
+                  <path fill="#FFD166" d="M4.5 7.5A1.5 1.5 0 0 1 6 9v10.5a1.5 1.5 0 0 1-3 0V9a1.5 1.5 0 0 1 1.5-1.5z"/>
+                  <path fill="#2196F3" d="M12 3a1.5 1.5 0 0 1 1.5 1.5v15a1.5 1.5 0 0 1-3 0v-15A1.5 1.5 0 0 1 12 3z"/>
+                  <path fill="#F44336" d="M19.5 5.25a1.5 1.5 0 0 1 1.5 1.5v12.75a1.5 1.5 0 0 1-3 0V6.75a1.5 1.5 0 0 1 1.5-1.5z"/>
+                </svg>
+              </div>
+              <div class="cp-title-group">
+                <div class="cp-platform-tag">
+                  <span>Codeforces</span>
+                  <span class="cp-live-indicator" title="Verified Profile">
+                    <span class="live-dot"></span>
+                    <span data-i18n="cp_live_synced">Verified Profile</span>
+                  </span>
+                </div>
+                <a href="https://codeforces.com/profile/israt_anjum_taspia" target="_blank" rel="noopener noreferrer" class="cp-handle-link">
+                  <span class="cp-handle">@israt_anjum_taspia</span>
+                  <i data-lucide="external-link"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Rank Badge -->
+            <div class="cp-rank-badge" id="cfRankBadge">
+              <span class="cp-rank-label" data-i18n="cp_rank_label">Rank</span>
+              <span class="cp-rank-val" id="cfRank">Newbie</span>
+            </div>
+          </div>
+
+          <!-- Description text -->
+          <p class="cp-card-bio" data-i18n="cp_desc">
+            Actively participating in Codeforces rounds, sharpening algorithmic logic in Data Structures, Number Theory, Greedy strategies, and problem solving with C++ and C.
+          </p>
+
+          <!-- Metrics Grid -->
+          <div class="cp-stats-grid">
+            <div class="cp-stat-box">
+              <div class="cp-stat-icon">
+                <i data-lucide="zap"></i>
+              </div>
+              <div class="cp-stat-info">
+                <div class="cp-stat-val" id="cfCurrentRating">737</div>
+                <div class="cp-stat-name" data-i18n="cp_rating_label">Current Rating</div>
+              </div>
+            </div>
+
+            <div class="cp-stat-box">
+              <div class="cp-stat-icon">
+                <i data-lucide="award"></i>
+              </div>
+              <div class="cp-stat-info">
+                <div class="cp-stat-val" id="cfMaxRating">792</div>
+                <div class="cp-stat-name" data-i18n="cp_peak_label">Peak Rating</div>
+              </div>
+            </div>
+
+            <div class="cp-stat-box">
+              <div class="cp-stat-icon">
+                <i data-lucide="check-circle-2"></i>
+              </div>
+              <div class="cp-stat-info">
+                <div class="cp-stat-val" id="cfSolvedCount">108+</div>
+                <div class="cp-stat-name" data-i18n="cp_solved_label">Problems Solved</div>
+              </div>
+            </div>
+
+            <div class="cp-stat-box">
+              <div class="cp-stat-icon">
+                <i data-lucide="code-2"></i>
+              </div>
+              <div class="cp-stat-info">
+                <div class="cp-stat-val">C++ / C</div>
+                <div class="cp-stat-name" data-i18n="cp_lang_label">Primary Languages</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Topics / Domains -->
+          <div class="cp-topics-container">
+            <div class="cp-topics-title">
+              <i data-lucide="layers"></i>
+              <span data-i18n="cp_topics_label">Problem Solving Domains</span>
+            </div>
+            <div class="cp-topics-pills">
+              <span class="cp-topic-pill">Implementation <span class="pill-count">65</span></span>
+              <span class="cp-topic-pill">Math <span class="pill-count">48</span></span>
+              <span class="cp-topic-pill">Greedy <span class="pill-count">29</span></span>
+              <span class="cp-topic-pill">Strings <span class="pill-count">22</span></span>
+              <span class="cp-topic-pill">Number Theory <span class="pill-count">20</span></span>
+              <span class="cp-topic-pill">Brute Force <span class="pill-count">19</span></span>
+              <span class="cp-topic-pill">Sortings <span class="pill-count">13</span></span>
+              <span class="cp-topic-pill">Constructive <span class="pill-count">13</span></span>
+            </div>
+          </div>
+
+          <!-- Card Bottom Action -->
+          <div class="cp-card-actions">
+            <a href="https://codeforces.com/profile/israt_anjum_taspia" target="_blank" rel="noopener noreferrer" class="btn-primary cp-profile-btn">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path fill="#FFD166" d="M4.5 7.5A1.5 1.5 0 0 1 6 9v10.5a1.5 1.5 0 0 1-3 0V9a1.5 1.5 0 0 1 1.5-1.5z"/>
+                <path fill="#2196F3" d="M12 3a1.5 1.5 0 0 1 1.5 1.5v15a1.5 1.5 0 0 1-3 0v-15A1.5 1.5 0 0 1 12 3z"/>
+                <path fill="#F44336" d="M19.5 5.25a1.5 1.5 0 0 1 1.5 1.5v12.75a1.5 1.5 0 0 1-3 0V6.75a1.5 1.5 0 0 1 1.5-1.5z"/>
+              </svg>
+              <span data-i18n="cp_view_btn">View Codeforces Profile</span>
+              <i data-lucide="arrow-right"></i>
+            </a>
+
+            <div class="cp-meta-sync">
+              <span class="sync-dot"></span>
+              <span id="cfSyncStatus" data-i18n="cp_live_synced">Verified Profile</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Projects -->
       <section id="projects" class="content-section">
         <div class="section-header">
           <h2 class="section-title" data-i18n="projects_title">Projects</h2>
