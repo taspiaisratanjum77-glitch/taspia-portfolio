@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Israt Anjum Taspia | Portfolio</title>
+  
+  <!-- Meta / SEO tags -->
+  <meta name="description" content="Portfolio of Israt Anjum Taspia - CSE Student, Frontend Developer, UI/UX Designer & Competitive Programmer." />
+  <meta name="keywords" content="Israt Anjum Taspia, Frontend Developer, UI/UX Designer, Web Developer, React, JavaScript, CSE Student, Portfolio" />
+  <meta name="author" content="Israt Anjum Taspia" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Israt Anjum Taspia | Portfolio" />
+  <meta property="og:description" content="CSE Student | Frontend Developer | UI/UX Designer | Competitive Programmer" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./assets/avatar-real.jpg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <!-- Ambient Background Canvas & Glow Orbs -->
+  <canvas id="ambient-canvas"></canvas>
+  <div class="ambient-glow orb-1"></div>
+  <div class="ambient-glow orb-2"></div>
+
+
+  <!-- Main Layout Wrapper -->
+  <div class="app-layout">
+    
+    <!-- Left Floating Glow Sidebar -->
+    <aside class="sidebar-card" id="sidebar">
+      
+      <!-- Top Right Translation Button (Matching TranslationButton.tsx) -->
+      <button class="lang-pill" id="langSwitchBtn" title="Change Language / ভাষা পরিবর্তন করুন">
+        <span class="lang-current" id="langLabel">EN</span>
+      </button>
+
+      <!-- Account / Profile Header (Matching Account.tsx) -->
+      <div class="sidebar-top">
+        <div class="profile-info-group">
+          <div class="avatar-container" id="avatarContainer" title="Click to switch avatar style!">
+            <img id="avatarImage" src="./assets/taspia.jpg?v=3" alt="Israt Anjum Taspia" class="avatar-img" />
+            <div class="avatar-glow-ring"></div>
+            <span class="avatar-toggle-badge" title="Toggle Real Photo / Partner's GitHub Avatar">
+              <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+                <path d="M3 3v5h5"></path>
+                <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"></path>
+                <path d="M16 21h5v-5"></path>
+              </svg>
+            </span>
+          </div>
+          <h1 class="profile-name">Taspia</h1>
+        </div>
+      </div>
+
+      <!-- Navigation Menu Box (Exact ChosenSoul Image 2 Clean Centered Links) -->
+      <nav class="nav-menu-box" aria-label="Main Navigation">
+        <a href="#hello" class="nav-link active" data-section="hello">
+          <span class="nav-text" data-i18n="nav_hello">HELLO</span>
+        </a>
+        <a href="#about" class="nav-link" data-section="about">
+          <span class="nav-text" data-i18n="nav_about">ABOUT ME</span>
+        </a>
+        <a href="#skills" class="nav-link" data-section="skills">
+          <span class="nav-text" data-i18n="nav_skills">SKILLS</span>
+        </a>
+        <a href="#projects" class="nav-link" data-section="projects">
+          <span class="nav-text" data-i18n="nav_projects">PROJECTS</span>
+        </a>
+      </nav>
+
+      <!-- Sidebar Footer / Socials -->
+      <div class="sidebar-footer">
+        <p class="contact-label" data-i18n="contact_label">Connect With Me</p>
+        <div class="social-icons-row">
+          <!-- GitHub -->
+          <a href="https://github.com/taspiaisratanjum77-glitch" target="_blank" rel="noopener noreferrer" class="social-icon" title="GitHub">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="https://linkedin.com/in/israt-anjum-taspia-a61b79397" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+          </a>
+
+          <!-- Behance -->
+          <a href="https://behance.net/isratanjumtaspia" target="_blank" rel="noopener noreferrer" class="social-icon" title="Behance UI/UX">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-4.996 3-3.411 0-5.73-2.67-5.73-6 0-3.518 2.378-6 5.625-6 3.483 0 5.375 2.502 5.375 6.136 0 .341-.035.705-.05 1h-8.868c.123 1.957 1.636 3.011 3.498 3.011 1.488 0 2.506-.613 2.946-1.647h2.2m-5.1-4.8c-.02-1.344-.928-2.227-2.316-2.227-1.314 0-2.353.945-2.482 2.227h4.798zM8.077 12.39c1.233-.67 1.923-1.83 1.923-3.21 0-2.613-2.033-4.18-5.321-4.18H0v14h4.912c3.416 0 5.688-1.745 5.688-4.59 0-1.127-.47-2.128-1.523-2.62zm-5.753-5.2h2.247c1.884 0 3.056.88 3.056 2.245 0 1.411-1.196 2.29-3.09 2.29H2.324V7.19zm2.464 9.61H2.324v-5.1h2.518c2.146 0 3.407 1.042 3.407 2.54 0 1.543-1.275 2.56-3.461 2.56z"/>
+            </svg>
+          </a>
+
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/profile.php?id=100077255712818" target="_blank" rel="noopener noreferrer" class="social-icon" title="Facebook">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/israt_anjum_taspia/" target="_blank" rel="noopener noreferrer" class="social-icon" title="Instagram">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+          </a>
+
+          <!-- Email -->
+          <button class="social-icon" id="copyEmailBtn" title="Copy Email">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Right Main Scrollable Viewport (Matching ChosenSoul ContentBox 80vh) -->
+    <main class="main-content" id="mainContent">
+      <div class="content-scroll-inner">
+
+      <section id="hello" class="content-section active-view">
+        
+        <!-- ChosenSoul Signature Big Typography Header -->
+        <div class="chosensoul-hero-banner">
+          <h1 class="chosensoul-title" data-i18n="hero_hello_1">Hello !</h1>
+          <h2 class="chosensoul-name" data-i18n="hero_name">I'm Israt Anjum Taspia</h2>
+          <h3 class="chosensoul-subtitle" data-i18n="hero_hello_2">Glad to see you</h3>
+          <p class="chosensoul-lead" data-i18n="hero_hello_3">Now let me tell you more about myself</p>
+        </div>
+
+        <div class="hello-meta-row">
+          <div class="hello-badge">
+            <span class="badge-dot"></span>
+            <span data-i18n="badge_status">Available for projects & hackathons</span>
+          </div>
+
+          <div class="typing-role-box">
+            <span class="role-prefix">&gt; </span>
+            <span id="typedRole">Frontend Developer</span>
+            <span class="cursor-blink">|</span>
+          </div>
+        </div>
+
+        <p class="hero-description" data-i18n="hero_bio">
+          Computer Science & Engineering student passionate about crafting sleek frontend user interfaces, exploring intelligent systems, and building creative software that turns ideas into interactive digital reality.
+        </p>
+
+        <!-- Quick Stats Strip -->
+        <div class="quick-stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">28+</div>
+            <div class="stat-label" data-i18n="stat_repos">GitHub Repos</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">100%</div>
+            <div class="stat-label" data-i18n="stat_dedication">Passion for Code</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">2026</div>
+            <div class="stat-label" data-i18n="stat_focus">Full-Stack & AI</div>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="hero-actions">
+          <a href="#projects" class="btn-primary" data-section-link="projects">
+            <i data-lucide="sparkles"></i>
+            <span data-i18n="btn_explore">Explore Projects</span>
+          </a>
+          <a href="mailto:taspiaisratanjum77@gmail.com" class="btn-secondary">
+            <i data-lucide="send"></i>
+            <span data-i18n="btn_get_in_touch">Get In Touch</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Section 2: About Me -->
+      <section id="about" class="content-section">
+        <div class="section-header">
+          <h2 class="section-title" data-i18n="about_title">About Me</h2>
+          <div class="title-glow-line"></div>
+        </div>
+
+        <div class="about-paragraphs">
+          <p class="about-text" data-i18n="about_p1">
+            I am a Computer Science & Engineering student, frontend developer, and enthusiastic problem solver. My coding journey is driven by an obsession with beautiful UI design, clean code architecture, and turning complex challenges into delightful user experiences.
+          </p>
+
+          <p class="about-text" data-i18n="about_p2">
+            Currently, I'm immersing myself in modern frontend ecosystems like <strong>React</strong> and JavaScript (ES6+), while strengthening my foundations in Data Structures, Algorithms, and low-level computing. I also actively explore backend development to craft full-fledged applications.
+          </p>
+
+          <p class="about-text" data-i18n="about_p3">
+            Beyond coding, I have a deep passion for <strong>UI/UX Design</strong>, participating in hackathons, competitive programming, and video editing. I believe technology thrives at the intersection of creative artistry and robust engineering.
+          </p>
+        </div>
+
+        <!-- Highlights Pillars Grid -->
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <i data-lucide="palette"></i>
+            </div>
+            <h3 class="pillar-title" data-i18n="pillar_frontend_title">UI/UX & Frontend</h3>
+            <p class="pillar-desc" data-i18n="pillar_frontend_desc">Building visually stunning, accessible, and responsive user interfaces with attention to micro-details.</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <i data-lucide="terminal"></i>
+            </div>
+            <h3 class="pillar-title" data-i18n="pillar_cp_title">Problem Solving</h3>
+            <p class="pillar-desc" data-i18n="pillar_cp_desc">Practicing competitive programming and exploring efficient algorithms & core computer science.</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <i data-lucide="sparkles"></i>
+            </div>
+            <h3 class="pillar-title" data-i18n="pillar_ai_title">AI & Innovation</h3>
+            <p class="pillar-desc" data-i18n="pillar_ai_desc">Aspiring AI engineer eager to integrate machine learning and intelligent automations into the web.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Skills -->
+      <section id="skills" class="content-section">
+        <div class="section-header">
+          <h2 class="section-title" data-i18n="skills_title">My Skills</h2>
+          <div class="title-glow-line"></div>
+        </div>
+
+        <p class="section-subtitle" data-i18n="skills_subtitle">Technologies, frameworks, and creative tools I work with daily</p>
+
+        <!-- Skill Filter Tabs -->
+        <div class="filter-pills" id="skillFilters">
+          <button class="filter-pill active" data-filter="all" data-i18n="filter_all">All Skills</button>
+          <button class="filter-pill" data-filter="frontend" data-i18n="filter_frontend">Frontend</button>
+          <button class="filter-pill" data-filter="languages" data-i18n="filter_languages">Languages</button>
+          <button class="filter-pill" data-filter="tools" data-i18n="filter_tools">Tools & Design</button>
+        </div>
+
+        <!-- 10 Exact Skill Showcase Cards (from user reference image) -->
+        <div class="skills-showcase-grid" id="skillsGrid">
+          <!-- HTML -->
+          <div class="skill-card-item" data-category="frontend" data-skill="html" title="HTML">
+            <div class="skill-icon-wrap">
+              <svg class="skill-svg" fill="currentColor" viewBox="0 0 50 50">
+        <g>
+            <path d="M 45.273438 2.324219 C 45.085938 2.117188 44.816406 2 44.535156 2 L 5.464844 2 C 5.183594 2 4.914063 2.117188 4.726563 2.324219 C 4.535156 2.53125 4.441406 2.808594 4.46875 3.089844 L 7.988281 42.515625 C 8.023438 42.929688 8.3125 43.273438 8.710938 43.390625 L 24.722656 47.960938 C 24.808594 47.988281 24.902344 48 24.996094 48 C 25.089844 48 25.179688 47.988281 25.269531 47.960938 L 41.292969 43.390625 C 41.691406 43.273438 41.976563 42.929688 42.015625 42.515625 L 45.53125 3.089844 C 45.558594 2.808594 45.464844 2.53125 45.273438 2.324219 Z M 36.847656 15.917969 L 18.035156 15.917969 L 18.484375 21.007813 L 36.394531 21.007813 L 35.050781 36.050781 L 24.992188 39.089844 L 24.894531 39.058594 L 14.953125 36.046875 L 14.410156 29.917969 L 19.28125 29.917969 L 19.492188 32.296875 L 25.050781 33.460938 L 30.507813 32.296875 L 31.089844 25.859375 L 14.046875 25.859375 L 12.722656 11.054688 L 37.28125 11.054688 Z"></path>
+        </g>
+    </svg>
+            </div>
+            <span class="skill-card-name">HTML</span>
+          </div>
+
+          <!-- CSS -->
+          <div class="skill-card-item" data-category="frontend" data-skill="css" title="CSS">
+            <div class="skill-icon-wrap">
+              <svg class="skill-svg" fill="currentColor" viewBox="0 0 50 50">
+        <g>
+            <path fill-rule="evenodd" d="M 42 6 L 39 40 L 25 44 L 11 40 L 8 6 Z M 16.800781 28 L 20.800781 28 L 20.898438 30.5 L 25 31.898438 L 29.101563 30.5 L 29.398438 26 L 20.601563 26 L 20.398438 22 L 29.601563 22 L 29.898438 18 L 16.101563 18 L 15.800781 14 L 34.101563 14 L 33.601563 22 L 32.898438 33.5 L 25 36.101563 L 17.101563 33.5 Z"></path>
+        </g>
+    </svg>
+            </div>
+            <span class="skill-card-name">CSS</span>
+          </div>
+
+          <!-- JS -->
+          <div class="skill-card-item active" data-category="frontend languages" data-skill="js" title="JS">
+            <div class="skill-icon-wrap">
+              <svg class="skill-svg" fill="currentColor" viewBox="0 0 50 50">
+        <g>
+            <path d="M 43.335938 4 L 6.667969 4 C 5.195313 4 4 5.195313 4 6.667969 L 4 43.332031 C 4 44.804688 5.195313 46 6.667969 46 L 43.332031 46 C 44.804688 46 46 44.804688 46 43.335938 L 46 6.667969 C 46 5.195313 44.804688 4 43.335938 4 Z M 27 36.183594 C 27 40.179688 24.65625 42 21.234375 42 C 18.140625 42 15.910156 39.925781 15 38 L 18.144531 36.097656 C 18.75 37.171875 19.671875 38 21 38 C 22.269531 38 23 37.503906 23 35.574219 L 23 23 L 27 23 Z M 35.675781 42 C 32.132813 42 30.121094 40.214844 29 38 L 32 36 C 32.816406 37.335938 33.707031 38.613281 35.589844 38.613281 C 37.171875 38.613281 38 37.824219 38 36.730469 C 38 35.425781 37.140625 34.960938 35.402344 34.199219 L 34.449219 33.789063 C 31.695313 32.617188 29.863281 31.148438 29.863281 28.039063 C 29.863281 25.179688 32.046875 23 35.453125 23 C 37.878906 23 39.621094 23.84375 40.878906 26.054688 L 37.910156 27.964844 C 37.253906 26.789063 36.550781 26.328125 35.453125 26.328125 C 34.335938 26.328125 33.628906 27.039063 33.628906 27.964844 C 33.628906 29.109375 34.335938 29.570313 35.972656 30.28125 L 36.925781 30.691406 C 40.171875 32.078125 42 33.496094 42 36.683594 C 42 40.117188 39.300781 42 35.675781 42 Z"></path>
+        </g>
+    </svg>
+            </div>
+            <span class="skill-card-name">JS</span>
+          </div>
+
+          <!-- TS -->
+          <div class="skill-card-item" data-category="frontend languages" data-skill="ts" title="TS">
+            <div class="skill-icon-wrap">
+              <svg class="skill-svg" fill="currentColor" viewBox="0 0 50 50">
+        <g>
+            <path d="M45,4H5C4.447,4,4,4.448,4,5v40c0,0.552,0.447,1,1,1h40c0.553,0,1-0.448,1-1V5C46,4.448,45.553,4,45,4z M29,26.445h-5V42h-4	V26.445h-5V23h14V26.445z M30.121,41.112v-4.158c0,0,2.271,1.712,4.996,1.712c2.725,0,2.62-1.782,2.62-2.026	c0-2.586-7.721-2.586-7.721-8.315c0-7.791,11.25-4.717,11.25-4.717l-0.14,3.704c0,0-1.887-1.258-4.018-1.258s-2.9,1.013-2.9,2.096	c0,2.795,7.791,2.516,7.791,8.141C42,44.955,30.121,41.112,30.121,41.112z"></path>
+        </g>
+    </svg>
+            </div>
+            <span class="skill-card-name">TS</span>
+          </div>
+
+          <!-- React -->
+          <div class="skill-card-item" data-category="frontend" data-skill="react" title="React">
+            <div class="skill-icon-wrap">
+              <svg class="skill-svg" fill="currentColor" viewBox="0 0 32 32">
+        <g>
+          <path d="M18.6789 15.9759C18.6789 14.5415 17.4796 13.3785 16 13.3785C14.5206 13.3785 13.3211 14.5415 13.3211 15.9759C13.3211 17.4105 14.5206 18.5734 16 18.5734C17.4796 18.5734 18.6789 17.4105 18.6789 15.9759Z"></path> <path d="M24.7004 11.1537C25.2661 8.92478 25.9772 4.79148 23.4704 3.39016C20.9753 1.99495 17.7284 4.66843 16.0139 6.27318C14.3044 4.68442 10.9663 2.02237 8.46163 3.42814C5.96751 4.82803 6.73664 8.8928 7.3149 11.1357C4.98831 11.7764 1 13.1564 1 15.9759C1 18.7874 4.98416 20.2888 7.29698 20.9289C6.71658 23.1842 5.98596 27.1909 8.48327 28.5877C10.9973 29.9932 14.325 27.3945 16.0554 25.7722C17.7809 27.3864 20.9966 30.0021 23.4922 28.6014C25.9956 27.1963 25.3436 23.1184 24.7653 20.8625C27.0073 20.221 31 18.7523 31 15.9759C31 13.1835 26.9903 11.7923 24.7004 11.1537ZM24.4162 19.667C24.0365 18.5016 23.524 17.2623 22.8971 15.9821C23.4955 14.7321 23.9881 13.5088 24.3572 12.3509C26.0359 12.8228 29.7185 13.9013 29.7185 15.9759C29.7185 18.07 26.1846 19.1587 24.4162 19.667ZM22.85 27.526C20.988 28.571 18.2221 26.0696 16.9478 24.8809C17.7932 23.9844 18.638 22.9422 19.4625 21.7849C20.9129 21.6602 22.283 21.4562 23.5256 21.1777C23.9326 22.7734 24.7202 26.4763 22.85 27.526ZM9.12362 27.5111C7.26143 26.47 8.11258 22.8946 8.53957 21.2333C9.76834 21.4969 11.1286 21.6865 12.5824 21.8008C13.4123 22.9332 14.2816 23.9741 15.1576 24.8857C14.0753 25.9008 10.9945 28.557 9.12362 27.5111ZM2.28149 15.9759C2.28149 13.874 5.94207 12.8033 7.65904 12.3326C8.03451 13.5165 8.52695 14.7544 9.12123 16.0062C8.51925 17.2766 8.01977 18.5341 7.64085 19.732C6.00369 19.2776 2.28149 18.0791 2.28149 15.9759ZM9.1037 4.50354C10.9735 3.45416 13.8747 6.00983 15.1159 7.16013C14.2444 8.06754 13.3831 9.1006 12.5603 10.2265C11.1494 10.3533 9.79875 10.5569 8.55709 10.8297C8.09125 9.02071 7.23592 5.55179 9.1037 4.50354ZM20.3793 11.5771C21.3365 11.6942 22.2536 11.85 23.1147 12.0406C22.8562 12.844 22.534 13.6841 22.1545 14.5453C21.6044 13.5333 21.0139 12.5416 20.3793 11.5771ZM16.0143 8.0481C16.6054 8.66897 17.1974 9.3623 17.7798 10.1145C16.5985 10.0603 15.4153 10.0601 14.234 10.1137C14.8169 9.36848 15.414 8.67618 16.0143 8.0481ZM9.8565 14.5444C9.48329 13.6862 9.16398 12.8424 8.90322 12.0275C9.75918 11.8418 10.672 11.69 11.623 11.5748C10.9866 12.5372 10.3971 13.5285 9.8565 14.5444ZM11.6503 20.4657C10.6679 20.3594 9.74126 20.2153 8.88556 20.0347C9.15044 19.2055 9.47678 18.3435 9.85796 17.4668C10.406 18.4933 11.0045 19.4942 11.6503 20.4657ZM16.0498 23.9915C15.4424 23.356 14.8365 22.6531 14.2448 21.8971C15.4328 21.9423 16.6231 21.9424 17.811 21.891C17.2268 22.6608 16.6369 23.3647 16.0498 23.9915ZM22.1667 17.4222C22.5677 18.3084 22.9057 19.1657 23.1742 19.9809C22.3043 20.1734 21.3652 20.3284 20.3757 20.4435C21.015 19.4607 21.6149 18.4536 22.1667 17.4222ZM18.7473 20.5941C16.9301 20.72 15.1016 20.7186 13.2838 20.6044C12.2509 19.1415 11.3314 17.603 10.5377 16.0058C11.3276 14.4119 12.2404 12.8764 13.2684 11.4158C15.0875 11.2825 16.9178 11.2821 18.7369 11.4166C19.7561 12.8771 20.6675 14.4086 21.4757 15.9881C20.6771 17.5812 19.7595 19.1198 18.7473 20.5941ZM22.8303 4.4666C24.7006 5.51254 23.8681 9.22726 23.4595 10.8426C22.2149 10.5641 20.8633 10.3569 19.4483 10.2281C18.6239 9.09004 17.7698 8.05518 16.9124 7.15949C18.1695 5.98441 20.9781 3.43089 22.8303 4.4666Z"></path>
+        </g>
+    </svg>
+            </div>
+            <span class="skill-card-name">React</span>
+          </div>
+
+          <!-- Tailwind -->
+          <div class="skill-card-item" data-category="frontend tools" data-skill="tailwind" title="Tailwind">
+            <div class="skill-icon-wrap">
+              <svg class="skill-svg" fill="currentColor" viewBox="0 0 48 48">
+        <g>
+          <path d="M24,9.604c-5.589,0-9.347,2.439-11.276,7.318c-0.2,0.505,0.417,0.92,0.816,0.551 c2.035-1.882,4.322-2.505,6.86-1.871c1.826,0.456,3.131,1.781,4.576,3.247C27.328,21.236,30.051,24,36,24 c5.589,0,9.348-2.44,11.276-7.319c0.2-0.505-0.417-0.92-0.816-0.551c-2.035,1.882-4.322,2.506-6.86,1.872 c-1.825-0.456-3.13-1.781-4.575-3.247C32.672,12.367,29.948,9.604,24,9.604L24,9.604z M12,24c-5.589,0-9.348,2.44-11.276,7.319 c-0.2,0.505,0.417,0.92,0.816,0.551c2.035-1.882,4.322-2.506,6.86-1.871c1.825,0.457,3.13,1.781,4.575,3.246 c2.353,2.388,5.077,5.152,11.025,5.152c5.589,0,9.348-2.44,11.276-7.319c0.2-0.505-0.417-0.92-0.816-0.551 c-2.035,1.882-4.322,2.506-6.86,1.871c-1.826-0.456-3.131-1.781-4.576-3.246C20.672,26.764,17.949,24,12,24L12,24z"></path>
+        </g>
+    </svg>
+            </div>
+            <span class="skill-card-name">Tailwind</span>
+          </div>
+
+          <!-- MUI -->
+          <div class="skill-card-item" data-category="frontend tools" data-skill="mui" title="MUI">
+            <div class="skill-icon-wrap">
+              <svg class="skill-svg" fill="currentColor" viewBox="0 0 48 48">
+        <g>
+            <polygon points="1,5 7,9 7,29 1,25"></polygon><polygon points="47,20 41,24 41,37 47,33"></polygon><polygon points="47,6 41,10 41,17 47,13"></polygon><polygon points="35,5 29,9 29,29 35,25"></polygon><polygon points="1,12 18,23 18,16 1,5"></polygon><polygon points="35,12 18,23 18,16 35,5"></polygon><polygon points="35,26 18,37 18,30 35,19"></polygon><polygon points="47,34 30,45 30,38 47,27"></polygon><polygon points="30,37.765 18,30 18,37 30,44.765"></polygon>
+        </g>
+    </svg>
+            </div>
+            <span class="skill-card-name">MUI</span>
+          </div>
+
+          <!-- Motion -->
+          <div class="skill-card-item" data-category="frontend tools" data-skill="motion" title="Motion">
+            <div class="skill-icon-wrap">
+              <svg class="skill-svg" fill="currentColor" viewBox="0 0 32 32"  >
+        <g>
+          <path d="M9.587 0L4.57 9L0 9L3.917 1.972C4.524.883 6.039 0 7.301 0H9.587Z" />
+          <path d="M20.794 2.25C20.794 1.007 21.817 0 23.079 0C24.341 0 25.364 1.007 25.364 2.25C25.364 3.493 24.341 4.5 23.079 4.5C21.817 4.5 20.794 3.493 20.794 2.25Z" />
+          <path d="M10.443 0L15.013 0L9.997 9L5.427 9L10.443 0ZM15.841 0L20.411 0L16.494 7.028C15.887 8.117 14.372 9 13.11 9L10.825 9Z" />
+        </g>
+      </svg>
+            </div>
+            <span class="skill-card-name">Motion</span>
+          </div>
+
+          <!-- C -->
+          <div class="skill-card-item" data-category="languages" data-skill="c" title="C">
+            <div class="skill-icon-wrap">
+              <svg class="skill-svg" fill="currentColor" viewBox="0 0 256 288">
+      <g>
+        <path d="M255.569 84.72c-.002-4.83-1.035-9.098-3.124-12.761-2.052-3.602-5.125-6.621-9.247-9.008-34.025-19.619-68.083-39.178-102.097-58.817-9.17-5.294-18.061-5.101-27.163.269C100.395 12.39 32.59 51.237 12.385 62.94 4.064 67.757.015 75.129.013 84.711 0 124.166.013 163.62 0 203.076c.002 4.724.991 8.909 2.988 12.517 2.053 3.711 5.169 6.813 9.386 9.254 20.206 11.703 88.02 50.547 101.56 58.536 9.106 5.373 17.997 5.565 27.17.269 34.015-19.64 68.075-39.198 102.105-58.817 4.217-2.44 7.333-5.544 9.386-9.252 1.994-3.608 2.985-7.793 2.987-12.518 0 0 0-78.889-.013-118.345" fill="#5A199B"/>
+        <path d="M128.182 143.509L2.988 215.593c2.053 3.711 5.169 6.813 9.386 9.254 20.206 11.703 88.02 50.547 101.56 58.536 9.106 5.373 17.997 5.565 27.17.269 34.015-19.64 68.075-39.198 102.105-58.817 4.217-2.44 7.333-5.544 9.386-9.252l-124.413-72.074" fill="#541d82"/>
+        <path d="M91.101 164.861c7.285 12.718 20.98 21.296 36.69 21.296 15.807 0 29.58-8.687 36.828-21.541l-36.437-21.107-37.081 21.352" fill="#541d82"/>
+        <path d="M255.569 84.72c-.002-4.83-1.035-9.098-3.124-12.761l-124.263 71.55 124.413 72.074c1.994-3.608 2.985-7.793 2.987-12.518 0 0 0-78.889-.013-118.345" fill="#6a27a1"/>
+        <path d="M164.619 164.616c-7.248 12.854-21.021 21.541-36.828 21.541-15.71 0-29.405-8.578-36.69-21.296a42.062 42.062 0 0 1-5.574-20.968c0-23.341 18.923-42.263 42.264-42.263 15.609 0 29.232 8.471 36.553 21.059l36.941-21.272c-14.683-25.346-42.096-42.398-73.494-42.398-46.876 0-84.875 38-84.875 84.874 0 15.378 4.091 29.799 11.241 42.238 14.646 25.48 42.137 42.637 73.634 42.637 31.555 0 59.089-17.226 73.714-42.781l-36.886-21.371" fill="#E0AAFE"/>
+      </g>
+    </svg>
+            </div>
+            <span class="skill-card-name">C</span>
+          </div>
+
+          <!-- C++ -->
+          <div class="skill-card-item" data-category="languages" data-skill="cpp" title="C++">
+            <div class="skill-icon-wrap">
+              <svg class="skill-svg" fill="currentColor" viewBox="0 0 256 288">
+      <g>
+        <path d="M255.569 84.72c-.002-4.83-1.035-9.098-3.124-12.761-2.052-3.602-5.125-6.621-9.247-9.008-34.025-19.619-68.083-39.178-102.097-58.817-9.17-5.294-18.061-5.101-27.163.269C100.395 12.39 32.59 51.237 12.385 62.94 4.064 67.757.015 75.129.013 84.711 0 124.166.013 163.62 0 203.076c.002 4.724.991 8.909 2.988 12.517 2.053 3.711 5.169 6.813 9.386 9.254 20.206 11.703 88.02 50.547 101.56 58.536 9.106 5.373 17.997 5.565 27.17.269 34.015-19.64 68.075-39.198 102.105-58.817 4.217-2.44 7.333-5.544 9.386-9.252 1.994-3.608 2.985-7.793 2.987-12.518 0 0 0-78.889-.013-118.345" fill="#5A199B"/>
+        <path d="M128.182 143.509L2.988 215.593c2.053 3.711 5.169 6.813 9.386 9.254 20.206 11.703 88.02 50.547 101.56 58.536 9.106 5.373 17.997 5.565 27.17.269 34.015-19.64 68.075-39.198 102.105-58.817 4.217-2.44 7.333-5.544 9.386-9.252l-124.413-72.074" fill="#541d82"/>
+        <path d="M91.101 164.861c7.285 12.718 20.98 21.296 36.69 21.296 15.807 0 29.58-8.687 36.828-21.541l-36.437-21.107-37.081 21.352" fill="#541d82"/>
+        <path d="M255.569 84.72c-.002-4.83-1.035-9.098-3.124-12.761l-124.263 71.55 124.413 72.074c1.994-3.608 2.985-7.793 2.987-12.518 0 0 0-78.889-.013-118.345" fill="#6a27a1"/>
+        <path d="M248.728 148.661h-9.722v9.724h-9.724v-9.724h-9.721v-9.721h9.721v-9.722h9.724v9.722h9.722v9.721M213.253 148.661h-9.721v9.724h-9.722v-9.724h-9.722v-9.721h9.722v-9.722h9.722v9.722h9.721v9.721" fill="#E0AAFE"/>
+        <path d="M164.619 164.616c-7.248 12.854-21.021 21.541-36.828 21.541-15.71 0-29.405-8.578-36.69-21.296a42.062 42.062 0 0 1-5.574-20.968c0-23.341 18.923-42.263 42.264-42.263 15.609 0 29.232 8.471 36.553 21.059l36.941-21.272c-14.683-25.346-42.096-42.398-73.494-42.398-46.876 0-84.875 38-84.875 84.874 0 15.378 4.091 29.799 11.241 42.238 14.646 25.48 42.137 42.637 73.634 42.637 31.555 0 59.089-17.226 73.714-42.781l-36.886-21.371" fill="#E0AAFE"/>
+      </g>
+    </svg>
+            </div>
+            <span class="skill-card-name">C++</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Projects -->
+      <section id="projects" class="content-section">
+        <div class="section-header">
+          <h2 class="section-title" data-i18n="projects_title">Projects</h2>
+          <div class="title-glow-line"></div>
+        </div>
+
+        <p class="section-subtitle" data-i18n="projects_subtitle">A curated selection of web applications, experiments, and creative UI works</p>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+          
+          <!-- Project 1: Map Estate -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <div class="project-badge">Featured Web App</div>
+              <div class="project-card-links">
+                <a href="https://github.com/taspiaisratanjum77-glitch/map_estate" target="_blank" rel="noopener noreferrer" class="card-action-btn" title="View Source on GitHub">
+                  <i data-lucide="github"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-visual map-estate-visual">
+              <div class="visual-gradient-overlay"></div>
+              <div class="project-preview-mockup">
+                <i data-lucide="map-pin" class="mockup-icon"></i>
+                <span class="mockup-tag">MAP ESTATE</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-name">Map Estate</h3>
+              <p class="project-desc" data-i18n="project_estate_desc">
+                Interactive real estate and properties exploration web app featuring dynamic filtering, responsive grid layouts, and clean user experience.
+              </p>
+              <div class="project-tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">UI/UX</span>
+              </div>
+              <div class="project-footer">
+                <a href="https://github.com/taspiaisratanjum77-glitch/map_estate" target="_blank" rel="noopener noreferrer" class="project-btn-primary">
+                  <i data-lucide="external-link"></i>
+                  <span data-i18n="btn_view_repo">View Repository</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: ChobiDeh Vol. 1 (Collaborative Project) -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <div class="project-badge">Collaborative Project</div>
+              <div class="project-card-links">
+                <a href="https://github.com/smasim825/ChobiDeh_vol1" target="_blank" rel="noopener noreferrer" class="card-action-btn" title="View Source on GitHub">
+                  <i data-lucide="github"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-visual chobideh-visual">
+              <div class="visual-gradient-overlay"></div>
+              <div class="project-preview-mockup">
+                <i data-lucide="layers" class="mockup-icon"></i>
+                <span class="mockup-tag">CHOBIDEH • CLOUD VAULT</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-name">ChobiDeh Vol. 1</h3>
+              <p class="project-desc" data-i18n="project_chobideh_desc">
+                Collaborative project featuring a modern responsive authentication panel with hardware-accelerated sliding transitions, layerable 3D cloud memory vault, and curated mint aesthetics.
+              </p>
+              <div class="project-tags">
+                <span class="tag">TypeScript</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">Animations</span>
+                <span class="tag">UI/UX</span>
+                <span class="tag">Collab</span>
+              </div>
+              <div class="project-footer">
+                <a href="https://github.com/smasim825/ChobiDeh_vol1" target="_blank" rel="noopener noreferrer" class="project-btn-primary">
+                  <i data-lucide="external-link"></i>
+                  <span data-i18n="btn_view_repo">View Repository</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: KoyJabo — IAIT Hackathon (Collaborative Project) -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <div class="project-badge">Hackathon Collaboration</div>
+              <div class="project-card-links">
+                <a href="https://github.com/smasim825/IAIT_hackathon" target="_blank" rel="noopener noreferrer" class="card-action-btn" title="View Source on GitHub">
+                  <i data-lucide="github"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-visual koyjabo-visual">
+              <div class="visual-gradient-overlay"></div>
+              <div class="project-preview-mockup">
+                <i data-lucide="navigation" class="mockup-icon"></i>
+                <span class="mockup-tag">KOYJABO • HACKATHON</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-name">KoyJabo — Transit Navigator</h3>
+              <p class="project-desc" data-i18n="project_koyjabo_desc">
+                IAIT Hackathon collaborative multimodal transit routing engine for Dhaka (MRT-6 Metro, local buses, legunas) with live road disruption dispatching and interactive map telemetry.
+              </p>
+              <div class="project-tags">
+                <span class="tag">React 18</span>
+                <span class="tag">Vite</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">Leaflet</span>
+                <span class="tag">Hackathon</span>
+              </div>
+              <div class="project-footer">
+                <a href="https://github.com/smasim825/IAIT_hackathon" target="_blank" rel="noopener noreferrer" class="project-btn-primary">
+                  <i data-lucide="external-link"></i>
+                  <span data-i18n="btn_view_repo">View Repository</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Behance UI/UX Portfolio -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <div class="project-badge">Design & Prototype</div>
+              <div class="project-card-links">
+                <a href="https://behance.net/isratanjumtaspia" target="_blank" rel="noopener noreferrer" class="card-action-btn" title="View on Behance">
+                  <i data-lucide="external-link"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-visual behance-visual">
+              <div class="visual-gradient-overlay"></div>
+              <div class="project-preview-mockup">
+                <i data-lucide="layout" class="mockup-icon"></i>
+                <span class="mockup-tag">BEHANCE DESIGNS</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-name">UI/UX Design Prototypes</h3>
+              <p class="project-desc" data-i18n="project_behance_desc">
+                Creative wireframes, visual style guides, and design explorations showcasing modern typography, color harmony, and user flows.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Figma</span>
+                <span class="tag">UI Design</span>
+                <span class="tag">Behance</span>
+                <span class="tag">Wireframing</span>
+              </div>
+              <div class="project-footer">
+                <a href="https://behance.net/isratanjumtaspia" target="_blank" rel="noopener noreferrer" class="project-btn-primary">
+                  <i data-lucide="arrow-up-right"></i>
+                  <span data-i18n="btn_explore_behance">Explore on Behance</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Bottom Credits Footer (Matching ChosenSoul PutStarrGithub & Clean Aesthetics) -->
+      <footer class="app-footer">
+        <div class="footer-content">
+          <div class="footer-star-section">
+            <span class="footer-star-label" data-i18n="footer_star">Star this project on GitHub:</span>
+            <a href="https://github.com/ChosenSoull/ChosenSoulPortfolio" target="_blank" rel="noopener noreferrer" class="footer-star-link">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+              <span>Repository</span>
+            </a>
+          </div>
+
+          <p class="footer-tagline" data-i18n="footer_tagline">"Turning ideas into delightful, interactive web reality."</p>
+
+          <div class="footer-bottom-bar">
+            <p class="footer-copyright">
+              © 2026 <span class="footer-name">Israt Anjum Taspia</span> • Powered by Modern Web &amp; Creative Code
+            </p>
+            <button class="footer-back-to-top" id="footerBackToTopBtn" title="Back to top">
+              <span>Back to Top</span>
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 15l-6-6-6 6"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </footer>
+      </div> <!-- End .content-scroll-inner -->
+    </main>
+  </div>
+
+
+  <!-- Toast Notification Container -->
+  <div class="toast-notification" id="toast">
+    <i data-lucide="check-circle" class="toast-icon"></i>
+    <span id="toastMessage">Email copied to clipboard!</span>
+  </div>
+
+  <!-- Main JavaScript Logic -->
+  <script src="./script.js"></script>
+</body>
+</html>
