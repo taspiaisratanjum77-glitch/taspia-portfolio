@@ -58,7 +58,7 @@ const translations = {
       "Tech Innovator"
     ],
     toast_email: "Email copied to clipboard!",
-    avatar_anime_toast: "Switched to Partner's GitHub Avatar",
+    avatar_anime_toast: "Switched to GitHub Profile Avatar",
     avatar_real_toast: "Switched to Real Photo"
   },
   bn: {
@@ -374,7 +374,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Avatar Switcher (Toggle between Real Photo taspia.jpg & Partner's GitHub Avatar)
+  // Avatar Switcher (Toggle between Real Photo taspia.jpg & GitHub Avatar)
   const avatarContainer = document.getElementById('avatarContainer');
   const avatarImage = document.getElementById('avatarImage');
   if (avatarContainer && avatarImage) {
@@ -385,7 +385,7 @@ document.addEventListener('DOMContentLoaded', () => {
         avatarImage.src = './assets/avatar-github.jpg';
         showToast(translations[currentLang].avatar_anime_toast);
       } else {
-        avatarImage.src = './assets/taspia.jpg?v=4';
+        avatarImage.src = './assets/taspia.jpg?v=5';
         showToast(translations[currentLang].avatar_real_toast);
       }
     });

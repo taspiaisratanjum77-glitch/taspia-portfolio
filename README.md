@@ -36,7 +36,7 @@ Built with an obsession for visual excellence, this portfolio features a curated
 - 🌌 **Starfield Physics Engine:** Zero-dependency HTML5 Canvas rendering floating star particles that react smoothly.
 - 🌐 **Instant Bilingual Toggle:** One-click language switch between English and বাংলা with persistent smooth transitions.
 - 🎵 **Web Audio Synthesizer:** Real-time audio micro-feedback synthesized in-browser with procedural oscillators (Zero external MP3/WAV assets).
-- 🔄 **Interactive Avatar Toggle:** Switch seamlessly between real portrait photography and partner GitHub profile avatar with audio feedback.
+- 🔄 **Interactive Avatar Toggle:** Switch seamlessly between real portrait photography and official GitHub avatar with audio feedback.
 - 🚀 **Zero Heavy Framework Overhead:** 100% lightweight Vanilla HTML5, modern CSS3 (Flexbox/Grid), and ES6+ JavaScript for blazing fast 100/100 Lighthouse performance.
 
 ---
