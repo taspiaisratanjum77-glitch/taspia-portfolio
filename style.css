@@ -1293,30 +1293,329 @@ html, body {
 
 @media (max-width: 900px) {
   html, body {
+    overflow-x: hidden;
     overflow-y: auto;
     height: auto;
+    min-height: 100vh;
   }
   .app-layout {
     flex-direction: column;
     height: auto;
+    min-height: 100vh;
     overflow: visible;
-    padding: 24px 16px;
-    gap: 36px;
+    padding: 24px 16px 48px;
+    gap: 32px;
+    justify-content: flex-start;
   }
   .sidebar-card {
     position: relative;
     width: 100%;
-    max-width: 480px;
+    max-width: 520px;
     margin: 0 auto;
     height: auto;
-    border-radius: 28px;
-    padding: 24px 18px;
+    border-radius: 26px;
+    padding: 22px 18px;
   }
   .main-content {
     height: auto;
     overflow: visible;
     padding-right: 0;
     max-width: 100%;
+    width: 100%;
+  }
+  .content-scroll-inner {
+    gap: 60px;
+  }
+}
+
+/* Phone screens & small viewports (iPhone, Android) */
+@media (max-width: 640px) {
+  .app-layout {
+    padding: 14px 12px 36px;
+    gap: 22px;
+  }
+
+  /* Compact Sleek Sidebar Header Card */
+  .sidebar-card {
+    border-radius: 22px;
+    padding: 16px 14px 14px;
+    gap: 12px;
+    border-width: 1.5px;
+    box-shadow: 0 0 20px rgba(198, 125, 255, 0.45);
+  }
+
+  .sidebar-top {
+    padding-top: 0;
+  }
+
+  .profile-info-group {
+    gap: 12px;
+  }
+
+  .avatar-container {
+    width: 64px;
+    height: 64px;
+  }
+
+  .avatar-toggle-badge {
+    width: 22px;
+    height: 22px;
+    bottom: -2px;
+    right: -2px;
+  }
+
+  .profile-name {
+    font-size: 1.4rem;
+    letter-spacing: -0.01em;
+  }
+
+  .lang-pill {
+    top: 14px;
+    right: 14px;
+    padding: 4px 10px;
+    font-size: 0.78rem;
+    border-radius: 12px;
+  }
+
+  /* 2x2 Grid for Navigation Items to save vertical height */
+  .sidebar-nav {
+    padding: 6px;
+    border-radius: 16px;
+  }
+
+  .nav-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+
+  .nav-link {
+    padding: 8px 6px;
+    font-size: 0.8rem;
+    justify-content: center;
+    border-radius: 10px;
+  }
+
+  .nav-link-dot {
+    display: none;
+  }
+
+  .sidebar-bottom {
+    gap: 8px;
+  }
+
+  .social-connect-label {
+    font-size: 0.72rem;
+    margin-bottom: 3px;
+  }
+
+  .social-links-row {
+    gap: 7px;
+    justify-content: center;
+  }
+
+  .social-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .sidebar-utility-row {
+    margin-top: 2px;
+    gap: 8px;
+  }
+
+  .audio-toggle-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .copy-email-btn {
+    padding: 6px 12px;
+    font-size: 0.78rem;
+    height: 32px;
+  }
+
+  /* Hero Section Typography Scaling for Phone */
+  .chosensoul-hero-banner {
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+
+  .chosensoul-title {
+    font-size: clamp(2rem, 9.2vw, 2.75rem);
+    line-height: 1.05;
+  }
+
+  .chosensoul-name {
+    font-size: clamp(1.4rem, 6.2vw, 1.85rem);
+    line-height: 1.18;
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  .chosensoul-subtitle {
+    font-size: clamp(1.25rem, 5.6vw, 1.7rem);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+
+  .chosensoul-lead {
+    font-size: clamp(0.92rem, 3.8vw, 1.1rem);
+    line-height: 1.35;
+    margin-top: 2px;
+  }
+
+  .hello-meta-row {
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .hello-badge {
+    font-size: 0.78rem;
+    padding: 5px 10px;
+  }
+
+  .typing-role-box {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+
+  .hero-bio {
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+
+  .hero-stats-row {
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .hero-stat-card {
+    padding: 10px 8px;
+    border-radius: 14px;
+  }
+
+  .stat-value {
+    font-size: 1.35rem;
+  }
+
+  .stat-label {
+    font-size: 0.7rem;
+  }
+
+  .hero-action-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+  }
+
+  /* Section Titles & Details */
+  .section-title {
+    font-size: clamp(1.55rem, 6.5vw, 1.95rem);
+  }
+
+  .section-subtitle {
+    font-size: 0.88rem;
+    margin-top: -6px;
+  }
+
+  .about-text-column p {
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+
+  .pillar-card {
+    padding: 16px 14px;
+    border-radius: 16px;
+  }
+
+  .pillar-title {
+    font-size: 1.05rem;
+  }
+
+  .pillar-desc {
+    font-size: 0.85rem;
+  }
+
+  /* Skills Grid on Phone */
+  .skills-showcase-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .skill-card-item {
+    padding: 14px 10px 12px;
+    min-height: 105px;
+    border-radius: 18px;
+    gap: 8px;
+  }
+
+  .skill-icon-wrap {
+    width: 42px;
+    height: 42px;
+  }
+
+  .skill-card-name {
+    font-size: 0.9rem;
+  }
+
+  /* Projects Grid on Phone */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .project-card {
+    padding: 18px 14px;
+    border-radius: 18px;
+  }
+
+  .project-title {
+    font-size: 1.2rem;
+  }
+
+  .project-desc {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  /* Footer on Phone */
+  .app-footer {
+    margin-top: 24px;
+    padding-top: 18px;
+    padding-bottom: 28px;
+  }
+
+  .footer-star-section {
+    font-size: 0.84rem;
+    gap: 6px;
+  }
+
+  .footer-star-link {
+    padding: 5px 12px;
+    font-size: 0.8rem;
+  }
+
+  .footer-tagline {
+    font-size: 0.82rem;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .footer-copyright {
+    font-size: 0.78rem;
   }
 }
 
