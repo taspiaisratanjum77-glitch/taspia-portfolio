@@ -256,7 +256,7 @@ html, body {
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  object-position: center 22%;
+  object-position: center 35%;
   outline: 3px solid var(--purple-700);
   border: none;
   box-shadow: 0 0 16px rgba(198, 125, 255, 0.65);

@@ -385,7 +385,7 @@ document.addEventListener('DOMContentLoaded', () => {
         avatarImage.src = './assets/avatar-github.jpg';
         showToast(translations[currentLang].avatar_anime_toast);
       } else {
-        avatarImage.src = './assets/taspia.jpg?v=5';
+        avatarImage.src = './assets/taspia.jpg?v=6';
         showToast(translations[currentLang].avatar_real_toast);
       }
     });
