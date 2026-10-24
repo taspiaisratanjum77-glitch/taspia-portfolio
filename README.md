@@ -58,6 +58,7 @@ Built with an obsession for visual excellence, this portfolio features a curated
 2. **[KoyJabo — Transit Navigator](https://github.com/smasim825/IAIT_hackathon)** — Multimodal transit routing engine for Dhaka (MRT-6 Metro, buses, legunas) with live road disruption dispatching and interactive map telemetry.
 3. **[Map Estate](https://github.com/taspiaisratanjum77-glitch/map_estate)** — Interactive property exploration web application with dynamic filtering and clean responsive card grids.
 4. **[Behance UI/UX Showcase](https://behance.net/isratanjum6)** — Creative UI explorations, design systems, and wireframes.
+5. **[Philosophy & Islamic Discourse (Side Interest)](https://www.facebook.com/profile.php?id=61586203171309)** — Analytical writings and reflections exploring Islamic thought, theology, philosophy, and contemporary faith vs. reason dialogues.
 
 ---
 

@@ -734,10 +734,10 @@ html, body {
   font-weight: 800;
 }
 
-/* Three Core Pillars */
+/* Four Core Pillars & Side Interests (Balanced 2x2 Grid) */
 .pillars-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   margin-top: 16px;
 }
@@ -752,6 +752,60 @@ html, body {
   gap: 12px;
   transition: all var(--transition-normal);
 }
+
+.pillar-card-link {
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.pillar-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.pillar-badge-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  background: rgba(198, 125, 255, 0.18);
+  border: 1px solid rgba(198, 125, 255, 0.4);
+  color: var(--purple-600);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.pillar-action-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--purple-600);
+  font-size: 0.88rem;
+  font-weight: 700;
+  margin-top: auto;
+  padding-top: 6px;
+  transition: all var(--transition-fast);
+}
+
+.pillar-action-link svg {
+  width: 14px;
+  height: 14px;
+  transition: transform var(--transition-bounce);
+}
+
+.pillar-card-link:hover .pillar-action-link {
+  color: #ffffff;
+}
+
+.pillar-card-link:hover .pillar-action-link svg {
+  transform: translate(3px, -3px);
+}
+
 
 .pillar-card:hover {
   border-color: var(--purple-650);
@@ -1013,6 +1067,11 @@ html, body {
 .behance-visual {
   background: linear-gradient(135deg, #240046 0%, #0f172a 100%);
 }
+
+.writing-visual {
+  background: linear-gradient(135deg, #3b0764 0%, #172554 60%, #11002c 100%);
+}
+
 
 .visual-gradient-overlay {
   position: absolute;
