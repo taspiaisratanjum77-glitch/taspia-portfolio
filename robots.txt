@@ -1,0 +1,5 @@
+# Robots.txt for Israt Anjum Taspia Portfolio
+User-agent: *
+Allow: /
+
+Sitemap: https://taspia-portfolio.vercel.app/sitemap.xml
