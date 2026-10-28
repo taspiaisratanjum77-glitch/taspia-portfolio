@@ -790,6 +790,11 @@ html, body {
   margin-top: auto;
   padding-top: 6px;
   transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.pillar-action-link span {
+  white-space: nowrap;
 }
 
 .pillar-action-link svg {
@@ -887,9 +892,10 @@ html, body {
 .skills-showcase-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 22px;
+  gap: 20px;
   width: 100%;
   margin-top: 14px;
+  padding: 8px 12px;
 }
 
 .skill-card-item {
@@ -942,10 +948,10 @@ html, body {
 /* Hover and Active State (Matching JS card in reference image) */
 .skill-card-item:hover,
 .skill-card-item.active {
-  transform: translateY(-8px) scale(1.15);
-  background: #2a0050;
+  transform: translateY(-6px) scale(1.04);
+  background: #2e0055;
   border-color: var(--purple-650); /* #c67dff */
-  box-shadow: 0 16px 36px rgba(198, 125, 255, 0.45), 0 0 20px rgba(198, 125, 255, 0.25);
+  box-shadow: 0 12px 28px rgba(198, 125, 255, 0.45), 0 0 16px rgba(198, 125, 255, 0.35);
   z-index: 5;
 }
 
@@ -972,6 +978,7 @@ html, body {
   .skills-showcase-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
+    padding: 8px 10px;
   }
 }
 
@@ -1111,12 +1118,12 @@ html, body {
 }
 
 .cp-rank-badge {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 3px;
-  padding: 6px 14px;
-  border-radius: 14px;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
   background: rgba(17, 0, 44, 0.75);
   border: 1px solid rgba(198, 125, 255, 0.35);
   box-shadow: 0 0 12px rgba(198, 125, 255, 0.2);
@@ -1521,9 +1528,9 @@ html, body {
    Footer (Matching ChosenSoul GitHub Star & Clean Layout)
    ========================================================================== */
 .app-footer {
-  margin-top: 40px;
-  padding-top: 28px;
-  padding-bottom: 40px;
+  margin-top: 36px;
+  padding-top: 24px;
+  padding-bottom: 36px;
   border-top: 1px solid rgba(198, 125, 255, 0.15);
 }
 
@@ -1533,98 +1540,40 @@ html, body {
   align-items: center;
   gap: 16px;
   text-align: center;
-}
-
-.footer-star-section {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  justify-content: center;
-  font-size: 0.95rem;
-  color: var(--purple-600);
-}
-
-.footer-star-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 14px;
-  background: rgba(36, 0, 70, 0.7);
-  border: 1px solid rgba(198, 125, 255, 0.35);
-  border-radius: var(--radius-full);
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 0.88rem;
-  font-weight: 700;
-  transition: all var(--transition-normal);
-}
-
-.footer-star-link svg {
-  color: #ffd166;
-  transition: transform var(--transition-bounce);
-}
-
-.footer-star-link:hover {
-  background: rgba(90, 25, 155, 0.85);
-  border-color: var(--neon-border);
-  box-shadow: 0 0 16px rgba(198, 125, 255, 0.4);
-  transform: translateY(-2px);
-}
-
-.footer-star-link:hover svg {
-  transform: scale(1.2) rotate(15deg);
+  width: 100%;
 }
 
 .footer-tagline {
-  font-size: 0.95rem;
+  font-size: 0.98rem;
   color: var(--purple-600);
   font-style: italic;
-  opacity: 0.85;
-}
-
-.footer-bottom-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 8px;
-  padding-top: 14px;
-  border-top: 1px dashed rgba(198, 125, 255, 0.1);
-}
-
-.footer-copyright {
-  font-size: 0.84rem;
-  color: var(--purple-600);
-  opacity: 0.8;
-}
-
-.footer-name {
-  color: #ffffff;
-  font-weight: 700;
+  opacity: 0.9;
+  letter-spacing: 0.02em;
+  max-width: 620px;
+  line-height: 1.6;
 }
 
 .footer-back-to-top {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: transparent;
-  border: 1px solid rgba(198, 125, 255, 0.25);
+  background: rgba(36, 0, 70, 0.7);
+  border: 1px solid rgba(198, 125, 255, 0.35);
   border-radius: var(--radius-full);
   color: var(--purple-600);
-  padding: 6px 12px;
-  font-size: 0.82rem;
+  padding: 8px 18px;
+  font-size: 0.84rem;
   font-weight: 700;
   cursor: pointer;
   transition: all var(--transition-normal);
+  margin-top: 6px;
 }
 
 .footer-back-to-top:hover {
-  background: rgba(198, 125, 255, 0.15);
+  background: rgba(198, 125, 255, 0.2);
   color: #ffffff;
   border-color: var(--neon-border);
+  box-shadow: 0 0 16px rgba(198, 125, 255, 0.35);
   transform: translateY(-2px);
 }
 
@@ -1771,25 +1720,37 @@ html, body {
     border-radius: 12px;
   }
 
-  /* Mobile Navigation Menu Box */
+  /* Mobile Navigation Menu Box - Single Row Smooth Horizontal Capsule */
   .nav-menu-box {
     width: 100%;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 6px;
-    padding: 6px;
-    border-radius: 18px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    gap: 4px;
+    padding: 5px 4px;
+    border-radius: 20px;
+    justify-content: space-between;
+  }
+
+  .nav-menu-box::-webkit-scrollbar {
+    display: none;
   }
 
   .nav-link {
+    flex: 1 0 auto;
+    white-space: nowrap;
     padding: 7px 10px;
-    font-size: 0.76rem;
-    flex: 1 1 auto;
-    min-width: calc(30% - 6px);
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    min-width: auto;
+    text-align: center;
     justify-content: center;
-    border-radius: 12px;
+    border-radius: 14px;
   }
 
   .sidebar-bottom {
@@ -1857,19 +1818,31 @@ html, body {
     margin-top: 2px;
   }
 
+  /* Hero Meta Row: Stack Badges Vertically on Mobile to Prevent Truncation */
   .hello-meta-row {
-    gap: 8px;
-    margin-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 14px;
+    width: 100%;
   }
 
   .hello-badge {
-    font-size: 0.78rem;
-    padding: 5px 10px;
+    font-size: 0.8rem;
+    padding: 7px 14px;
+    width: fit-content;
+    max-width: 100%;
+    line-height: 1.35;
+    white-space: normal;
   }
 
   .typing-role-box {
-    font-size: 0.8rem;
-    padding: 5px 10px;
+    font-size: 0.92rem;
+    padding: 7px 14px;
+    width: fit-content;
+    max-width: 100%;
+    white-space: nowrap;
   }
 
   .hero-bio {
@@ -1877,25 +1850,30 @@ html, body {
     line-height: 1.55;
   }
 
-  .hero-stats-row {
+  .quick-stats-grid {
+    grid-template-columns: repeat(3, 1fr);
     gap: 8px;
-    margin-top: 12px;
+    margin: 12px 0;
   }
 
-  .hero-stat-card {
-    padding: 10px 8px;
+  .stat-card {
+    padding: 10px 6px;
     border-radius: 14px;
+    text-align: center;
+    align-items: center;
   }
 
-  .stat-value {
+  .stat-number {
     font-size: 1.35rem;
   }
 
   .stat-label {
-    font-size: 0.7rem;
+    font-size: 0.68rem;
+    line-height: 1.25;
   }
 
-  .hero-action-buttons {
+  .hero-actions {
+    display: flex;
     flex-direction: column;
     width: 100%;
     gap: 10px;
@@ -1924,7 +1902,7 @@ html, body {
   }
 
   .pillar-card {
-    padding: 16px 14px;
+    padding: 18px 16px;
     border-radius: 16px;
   }
 
@@ -1936,17 +1914,29 @@ html, body {
     font-size: 0.85rem;
   }
 
+  .pillar-action-link {
+    font-size: 0.84rem;
+    white-space: nowrap;
+  }
+
   /* Skills Grid on Phone */
   .skills-showcase-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: 12px;
+    padding: 8px 10px;
   }
 
   .skill-card-item {
-    padding: 14px 10px 12px;
-    min-height: 105px;
-    border-radius: 18px;
+    padding: 16px 10px 14px;
+    min-height: 110px;
+    border-radius: 20px;
     gap: 8px;
+  }
+
+  .skill-card-item:hover,
+  .skill-card-item.active {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 8px 22px rgba(198, 125, 255, 0.4), 0 0 14px rgba(198, 125, 255, 0.25);
   }
 
   .skill-icon-wrap {
@@ -1956,24 +1946,103 @@ html, body {
 
   /* CP Showcase Card on Phone */
   .cp-showcase-card {
-    padding: 20px 16px;
+    padding: 18px 14px;
     border-radius: 18px;
-    gap: 18px;
+    gap: 16px;
+  }
+
+  .cp-card-topbar {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  .cp-profile-ident {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    min-width: 0;
   }
 
   .cf-logo-box {
-    width: 44px;
-    height: 44px;
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
     border-radius: 12px;
+    flex-shrink: 0;
   }
 
   .cf-logo-svg {
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .cp-title-group {
+    min-width: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .cp-platform-tag {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    font-size: 0.72rem;
+  }
+
+  .cp-live-indicator {
+    padding: 2px 7px;
+    font-size: 0.65rem;
+    white-space: nowrap;
+    border-radius: 9999px;
   }
 
   .cp-handle-link {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    gap: 5px;
+  }
+
+  .cp-handle-link svg {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+  }
+
+  .cp-rank-badge {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    padding: 5px 10px;
+    border-radius: 12px;
+    align-items: center;
+    text-align: center;
+    min-width: 68px;
+    gap: 2px;
+  }
+
+  .cp-rank-label {
+    font-size: 0.6rem;
+  }
+
+  .cp-rank-val {
+    font-size: 0.84rem;
+  }
+
+  .cp-card-bio {
+    font-size: 0.88rem;
+    line-height: 1.55;
   }
 
   .cp-stats-grid {
@@ -2050,32 +2119,12 @@ html, body {
   .app-footer {
     margin-top: 24px;
     padding-top: 18px;
-    padding-bottom: 28px;
-  }
-
-  .footer-star-section {
-    font-size: 0.84rem;
-    gap: 6px;
-  }
-
-  .footer-star-link {
-    padding: 5px 12px;
-    font-size: 0.8rem;
+    padding-bottom: 24px;
   }
 
   .footer-tagline {
-    font-size: 0.82rem;
-  }
-
-  .footer-bottom-bar {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    text-align: center;
-  }
-
-  .footer-copyright {
-    font-size: 0.78rem;
+    font-size: 0.85rem;
+    line-height: 1.5;
   }
 }
 

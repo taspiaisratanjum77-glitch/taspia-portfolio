@@ -484,14 +484,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // Footer Back To Top Button
   const footerBackToTopBtn = document.getElementById('footerBackToTopBtn');
   if (footerBackToTopBtn) {
-    footerBackToTopBtn.addEventListener('click', () => {
+    footerBackToTopBtn.addEventListener('click', (e) => {
+      e.preventDefault();
       sfx.playClick();
       const mainContent = document.getElementById('mainContent');
       if (mainContent) {
         mainContent.scrollTo({ top: 0, behavior: 'smooth' });
-      } else {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
       }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      document.documentElement.scrollTo({ top: 0, behavior: 'smooth' });
+      document.body.scrollTo({ top: 0, behavior: 'smooth' });
+      document.getElementById('hello')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   }
 
@@ -525,6 +528,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
           navLinks.forEach((l) => l.classList.remove('active'));
           link.classList.add('active');
+          if (window.innerWidth <= 640) {
+            link.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+          }
         }
       }
     });
@@ -558,7 +564,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const onScrollUpdate = () => {
     const scrollY = mainContent ? mainContent.scrollTop : window.scrollY;
 
-
     let current = '';
     const scrollPos = scrollY + 180;
 
@@ -572,9 +577,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (current) {
       navLinks.forEach((link) => {
+        const wasActive = link.classList.contains('active');
         link.classList.remove('active');
         if (link.getAttribute('href') === `#${current}`) {
           link.classList.add('active');
+          if (!wasActive && window.innerWidth <= 640) {
+            link.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+          }
         }
       });
     }
@@ -610,12 +619,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Click on any skill card to elevate & highlight it (like reference JS card)
+  // Click on any skill card to elevate & highlight it (toggleable)
   skillCards.forEach((card) => {
     card.addEventListener('click', () => {
       sfx.playPop();
+      const wasActive = card.classList.contains('active');
       skillCards.forEach((c) => c.classList.remove('active'));
-      card.classList.add('active');
+      if (!wasActive) {
+        card.classList.add('active');
+      }
     });
   });
 
